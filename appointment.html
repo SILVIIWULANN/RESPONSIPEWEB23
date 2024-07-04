@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buat Janji - MindWell Clinic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>MindWell Clinic</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b> Beranda </b></a></li>
+                <li><a href="schedule.html"><b> Jadwal Konsultasi </b></a></li>
+                <li><a href="appointment.html"><b> Buat Janji </b></a></li>
+                <li><a href="admin.html"><b>Admin</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Buat Janji Konsultasi</h2>
+        <form action="process_appointment.php" method="POST">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="layanan"> Jenis layanan konsultasi:</label>
+            <select id="layanan" name="layanan" required>
+                <option value="">Select Layanana</option>
+                <option value="Konseling Individual">Konseling Individual</option>
+                <option value="Konseling Kelompok ">Konseling Kelompok </option>
+                <option value="Psikotes">Psikotes</option>
+                <option value="Psikoedukasi">Psikoedukasi</option>
+                </select>
+            <label for="date">Tanggal Konsultasi:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Waktu Konsultasi:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Buat Janji</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 MindWell Clinic</p>
+    </footer>
+
+</body>
+</html>
